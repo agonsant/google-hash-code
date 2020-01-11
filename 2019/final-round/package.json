@@ -1,0 +1,24 @@
+{
+  "name": "hash-code-final-2019-node",
+  "version": "1.0.0",
+  "description": "The final challenge for the hash code 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agonsant/hash-code-final-2019.git"
+  },
+  "keywords": [
+    "Hashcode",
+    "google",
+    "algorithm"
+  ],
+  "author": "Alex Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agonsant/hash-code-final-2019/issues"
+  },
+  "homepage": "https://github.com/agonsant/hash-code-final-2019#readme"
+}
