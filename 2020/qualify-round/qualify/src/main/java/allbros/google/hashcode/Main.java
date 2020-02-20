@@ -3,10 +3,10 @@ package allbros.google.hashcode;
 import allbros.google.hashcode.file.FilePathUtil;
 import allbros.google.hashcode.launcher.Launcher;
 import allbros.google.hashcode.launcher.LauncherBuilder;
-import allbros.google.hashcode.model.Delivery;
-import allbros.google.hashcode.model.Pizzeria;
-import allbros.google.hashcode.model.process.DeliverySerializer;
-import allbros.google.hashcode.model.process.PizzeriaDeserializer;
+import allbros.google.hashcode.model.InputData;
+import allbros.google.hashcode.model.OutputData;
+import allbros.google.hashcode.model.data.LibraryDeserializer;
+import allbros.google.hashcode.model.data.LibrarySerializer;
 
 public class Main {
 
@@ -17,10 +17,10 @@ public class Main {
 	private static final String outFileNamePattern = "%s.txt";
 
 	public static void main(String[] args) {
-		Launcher<Pizzeria, Delivery> launcher = new LauncherBuilder<Pizzeria, Delivery>()
-				.withSolver(new PizzeriaSolver())
-				.withDeserialize(new PizzeriaDeserializer())
-				.withSerialize(new DeliverySerializer())
+		Launcher<InputData, OutputData> launcher = new LauncherBuilder<InputData, OutputData>()
+				.withSolver(new ScanLibrarySolver())
+				.withDeserialize(new LibraryDeserializer())
+				.withSerialize(new LibrarySerializer())
 				.withDataSetFilePath(FilePathUtil.buildFilePathSet(files,inputFilePath,inputFileNamePattern))
 				.withSolutionSetFilePath(FilePathUtil.buildFilePathSet(files,outputFilePath,outFileNamePattern))
 				.build();

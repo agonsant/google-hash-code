@@ -1,4 +1,4 @@
-package allbros.google.hashcode.model.process;
+package allbros.google.hashcode.model.data;
 
 import allbros.google.hashcode.file.contract.StringDeserializer;
 import allbros.google.hashcode.model.Pizzeria;

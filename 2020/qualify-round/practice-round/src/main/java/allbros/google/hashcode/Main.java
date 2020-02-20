@@ -5,8 +5,8 @@ import allbros.google.hashcode.launcher.Launcher;
 import allbros.google.hashcode.launcher.LauncherBuilder;
 import allbros.google.hashcode.model.Delivery;
 import allbros.google.hashcode.model.Pizzeria;
-import allbros.google.hashcode.model.process.DeliverySerializer;
-import allbros.google.hashcode.model.process.PizzeriaDeserializer;
+import allbros.google.hashcode.model.data.DeliverySerializer;
+import allbros.google.hashcode.model.data.PizzeriaDeserializer;
 
 public class Main {
 
