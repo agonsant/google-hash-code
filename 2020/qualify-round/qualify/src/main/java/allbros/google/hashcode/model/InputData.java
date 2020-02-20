@@ -5,6 +5,8 @@ import java.util.*;
 public class InputData {
     public Set<Library> librarySet;
     public int dayToShip;
+    public int numberOfBooks;
+    public int numberOfLibraries;
 
     public InputData() {
         this.librarySet = new TreeSet<>() ;
@@ -24,5 +26,21 @@ public class InputData {
 
     public void setDayToShip(int dayToShip) {
         this.dayToShip = dayToShip;
+    }
+
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    public void setNumberOfBooks(int numberOfBooks) {
+        this.numberOfBooks = numberOfBooks;
+    }
+
+    public int getNumberOfLibraries() {
+        return numberOfLibraries;
+    }
+
+    public void setNumberOfLibraries(int numberOfLibraries) {
+        this.numberOfLibraries = numberOfLibraries;
     }
 }
