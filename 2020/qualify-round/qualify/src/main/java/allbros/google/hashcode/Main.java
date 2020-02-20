@@ -26,7 +26,7 @@ public class Main {
 				.withSolutionSetFilePath(FilePathUtil.buildFilePathSet(files,outputFilePath,outFileNamePattern))
 				.build();
 
-		launcher.launchDataSet(3);
+		launcher.launchDataSet(5);
 	}
 
 }
