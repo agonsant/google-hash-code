@@ -9,12 +9,20 @@ import allbros.google.hashcode.model.comparator.BookComparator;
 public class Library {
     private int id;
     private Set<Book> bookSet;
+    private int numberOfBooks;
     private int signDays;
-    private int numberBookScannedPerDay;
+    private int numberOfBooksScannedPerDay;
     private int totalScoring;
 
     public Library() {
-        this.bookSet = new TreeSet<Book>( new BookComparator());
+        this.bookSet = new TreeSet<>( new BookComparator());
+    }
+
+    public Library(String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
+        this.bookSet = new TreeSet<>( new BookComparator());
+        this.numberOfBooks = Integer.parseInt(numberOfBooks);
+        this.signDays = Integer.parseInt(signDays);
+        this.numberOfBooksScannedPerDay = Integer.parseInt(numberOfBooksScannedPerDay);
     }
 
     public int getId() {
@@ -41,12 +49,12 @@ public class Library {
         this.signDays = signDays;
     }
 
-    public int getNumberBookScannedPerDay() {
-        return numberBookScannedPerDay;
+    public int getNumberOfBooksScannedPerDay() {
+        return numberOfBooksScannedPerDay;
     }
 
-    public void setNumberBookScannedPerDay(int numberBookScannedPerDay) {
-        this.numberBookScannedPerDay = numberBookScannedPerDay;
+    public void setNumberOfBooksScannedPerDay(int numberOfBooksScannedPerDay) {
+        this.numberOfBooksScannedPerDay = numberOfBooksScannedPerDay;
     }
 
     public int getTotalScoring() {
@@ -55,6 +63,14 @@ public class Library {
 
     public void setTotalScoring(int totalScoring) {
         this.totalScoring = totalScoring;
+    }
+
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    public void setNumberOfBooks(int numberOfBooks) {
+        this.numberOfBooks = numberOfBooks;
     }
 
     @Override
