@@ -1,4 +1,4 @@
-package allbros.google.hashcode.model.compartor;
+package allbros.google.hashcode.model.comparator;
 
 import allbros.google.hashcode.model.Book;
 
