@@ -6,6 +6,11 @@ public class Book {
     private int id;
     private int score;
 
+    public Book(int id, String score) {
+        this.id= id;
+        this.score = Integer.parseInt(score);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
