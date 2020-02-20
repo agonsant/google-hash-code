@@ -10,13 +10,14 @@ import allbros.google.hashcode.model.data.LibrarySerializer;
 
 public class Main {
 
-	private static final String[] files = { "a_example", "b_small", "c_medium", "d_quite_big", "e_also_big" };
-	private static final String inputFilePath = "./problem-statement/%s";
+	private static final String[] files = { "a_example", "b_read_on", "c_incunabula", "d_tough_choices", "e_so_many_books" ,"f_libraries_of_the_world"};
+	private static final String inputFilePath = "./resources/problem-statement/%s";
 	private static final String outputFilePath = "./output/%s";
 	private static final String inputFileNamePattern = "%s.in";
 	private static final String outFileNamePattern = "%s.txt";
 
 	public static void main(String[] args) {
+
 		Launcher<InputData, OutputData> launcher = new LauncherBuilder<InputData, OutputData>()
 				.withSolver(new ScanLibrarySolver())
 				.withDeserialize(new LibraryDeserializer())
