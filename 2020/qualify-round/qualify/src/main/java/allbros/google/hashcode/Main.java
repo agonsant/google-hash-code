@@ -11,14 +11,14 @@ import allbros.google.hashcode.model.process.PizzeriaDeserializer;
 public class Main {
 
 	private static final String[] files = { "a_example", "b_small", "c_medium", "d_quite_big", "e_also_big" };
-	private static final String inputFilePath = "./problem-statement/%s";
+	private static final String inputFilePath = "./resources/problem-statement/%s";
 	private static final String outputFilePath = "./output/%s";
 	private static final String inputFileNamePattern = "%s.in";
 	private static final String outFileNamePattern = "%s.txt";
 
 	public static void main(String[] args) {
 		Launcher<Pizzeria, Delivery> launcher = new LauncherBuilder<Pizzeria, Delivery>()
-				.withSolver(new PizzeriaSolver())
+				.withSolver(new BookScanningSolver())
 				.withDeserialize(new PizzeriaDeserializer())
 				.withSerialize(new DeliverySerializer())
 				.withDataSetFilePath(FilePathUtil.buildFilePathSet(files,inputFilePath,inputFileNamePattern))
