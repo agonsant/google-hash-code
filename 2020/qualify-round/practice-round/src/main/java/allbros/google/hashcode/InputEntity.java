@@ -1,5 +1,5 @@
 
-package hashCode;
+package allbros.google.hashcode;
 
 public class InputEntity {
 
