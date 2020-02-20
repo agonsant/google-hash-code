@@ -34,7 +34,7 @@ public class ScanLibrarySolver implements Solver<InputData, OutputData> {
 	}
 
 	public Set<Book> getBooks(Library lib, int totalDays) {
-		int books = Math.min(lib.getBookSet().size(), totalDays * lib.getNumberBookScannedPerDay());
+		int books = Math.min(lib.getBookSet().size(), totalDays * lib.getNumberOfBooksScannedPerDay());
 		Set<Book> l = new HashSet<>();
 		Iterator<Book> it = lib.getBookSet().iterator();
 		for (int i = 0; i < books; i++) {

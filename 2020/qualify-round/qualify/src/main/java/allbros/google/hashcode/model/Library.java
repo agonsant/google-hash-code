@@ -85,4 +85,8 @@ public class Library {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public void addBook(Book newBook) {
+        getBookSet().add(newBook);
+    }
 }
