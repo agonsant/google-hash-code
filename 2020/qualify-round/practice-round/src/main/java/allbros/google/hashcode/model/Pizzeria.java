@@ -1,12 +1,12 @@
 
-package allbros.google.hashcode;
+package allbros.google.hashcode.model;
 
-public class InputEntity {
+public class Pizzeria {
 
     private int maxSlices;
     private int[] pizzaSlices;
 
-    public InputEntity(int maxSlices, int maxPizzaTypes) {
+    public Pizzeria(int maxSlices, int maxPizzaTypes) {
         this.maxSlices = maxSlices;
         this.pizzaSlices = new int[maxPizzaTypes];
     }
@@ -19,7 +19,7 @@ public class InputEntity {
         return this.pizzaSlices;
     }
 
-    public int getMaximunSlices() {
+    public int getMaximumSlices() {
         return this.maxSlices;
     }
 }

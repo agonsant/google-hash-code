@@ -1,8 +1,8 @@
 package allbros.google.hashcode.file.contract;
 
-public interface StringSerializer {
+public interface StringSerializer<TSerialize>  {
 
 
-    <TDeserialize> String serialize(TDeserialize objectToSerialize);
+    String serialize(TSerialize objectToSerialize);
 }
 

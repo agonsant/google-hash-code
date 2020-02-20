@@ -1,14 +1,14 @@
 
-package allbros.google.hashcode;
+package allbros.google.hashcode.model;
 
 import java.util.Arrays;
 
-public class OutputEntity {
+public class Delivery {
 
     private int pizzaOrderedSize;
     private boolean[] pizzaOrdered;
 
-    public OutputEntity(int maxPizzaTypes) {
+    public Delivery(int maxPizzaTypes) {
         this.pizzaOrderedSize = 0;
         this.pizzaOrdered = new boolean[maxPizzaTypes];
         Arrays.fill(this.pizzaOrdered, false);
