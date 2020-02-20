@@ -9,6 +9,7 @@ public class Library {
     private Set<Book> bookSet;
     private int signDays;
     private int numberBookScannedPerDay;
+    private int totalScoring;
 
     public Library() {
         this.bookSet = new TreeSet<>();
@@ -44,6 +45,14 @@ public class Library {
 
     public void setNumberBookScannedPerDay(int numberBookScannedPerDay) {
         this.numberBookScannedPerDay = numberBookScannedPerDay;
+    }
+
+    public int getTotalScoring() {
+        return totalScoring;
+    }
+
+    public void setTotalScoring(int totalScoring) {
+        this.totalScoring = totalScoring;
     }
 
     @Override
