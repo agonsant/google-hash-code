@@ -30,6 +30,7 @@ public class LibrarySerializer implements StringSerializer<OutputData> {
                 deliveryString.append(itBook.next().getId());
                 deliveryString.append(" ");
         	}
+        	deliveryString.append(System.getProperty("line.separator"));
         }
         return deliveryString.toString();
     }
