@@ -26,6 +26,7 @@ public class LibraryDeserializer implements StringDeserializer<InputData> {
         for(String bookId:libraryBooksSetDataSplit) {
             newLibrary.addBook(googleBookSet[Integer.parseInt(bookId)]);
         }
+        newLibrary.calculateTotalScoring();
         return newLibrary;
     }
 

@@ -16,9 +16,9 @@ public class Library {
         this.bookSet = new LinkedList<>();
     }
 
-    public Library(int id,String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
+    public Library(int id, String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
         this.id = id;
-        this.bookSet =  new LinkedList<>();
+        this.bookSet = new LinkedList<>();
         this.numberOfBooks = Integer.parseInt(numberOfBooks);
         this.signDays = Integer.parseInt(signDays);
         this.numberOfBooksScannedPerDay = Integer.parseInt(numberOfBooksScannedPerDay);
@@ -87,5 +87,12 @@ public class Library {
 
     public void addBook(Book newBook) {
         getBookSet().add(newBook);
+    }
+
+    public void calculateTotalScoring() {
+
+        this.totalScoring = bookSet.stream()
+                .mapToInt(Book::getScore)
+                .reduce(0, Integer::sum);
     }
 }
