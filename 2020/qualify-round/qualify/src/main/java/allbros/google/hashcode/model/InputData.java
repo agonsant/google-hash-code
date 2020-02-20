@@ -5,21 +5,21 @@ import java.util.*;
 import allbros.google.hashcode.model.comparator.LibraryComparator;
 
 public class InputData {
-    private Set<Library> librarySet;
+    private List<Library> librarySet;
     private Book[] bookArray;
     private int dayToShip;
     private int numberOfBooks;
     private int numberOfLibraries;
 
     public InputData() {
-        this.librarySet = new TreeSet<Library>(new LibraryComparator()) ;
+        this.librarySet = new ArrayList<>() ;
     }
 
-    public Set<Library> getLibrarySet() {
+    public List<Library> getLibrarySet() {
         return librarySet;
     }
 
-    public void setLibrarySet(Set<Library> librarySet) {
+    public void setLibrarySet(List<Library> librarySet) {
         this.librarySet = librarySet;
     }
 

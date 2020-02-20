@@ -18,6 +18,7 @@ public class LibraryDeserializer implements StringDeserializer<InputData> {
     }
 
     private Library loadLibraryData(int libraryId,String librarySetup, String libraryBooksSetData,Book[] googleBookSet) {
+        System.out.println("Creating Library id:"+libraryId);
         String[] librarySetupSplit = librarySetup.split(" ");
         String[] libraryBooksSetDataSplit = libraryBooksSetData.split(" ");
         Library newLibrary = new Library(libraryId,librarySetupSplit[0],librarySetupSplit[1],librarySetupSplit[2]);
