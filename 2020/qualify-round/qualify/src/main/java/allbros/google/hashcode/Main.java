@@ -26,7 +26,14 @@ public class Main {
 				.withSolutionSetFilePath(FilePathUtil.buildFilePathSet(files,outputFilePath,outFileNamePattern))
 				.build();
 
-		launcher.launchDataSet(5);
+		launcher.launchDataSet(1);
+		//launchAll(launcher);
+	}
+
+	private static void launchAll(Launcher<InputData, OutputData> launcher) {
+		for(int i =0;i<6;i++){
+			launcher.launchDataSet(i);
+		}
 	}
 
 }

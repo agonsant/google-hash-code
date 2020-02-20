@@ -1,26 +1,24 @@
 package allbros.google.hashcode.model;
 
-import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 import allbros.google.hashcode.model.comparator.BookComparator;
 
 public class Library {
     private int id;
-    private Set<Book> bookSet;
+    private List<Book> bookSet;
     private int numberOfBooks;
     private int signDays;
     private int numberOfBooksScannedPerDay;
     private int totalScoring;
 
     public Library() {
-        this.bookSet = new TreeSet<>( new BookComparator());
+        this.bookSet = new ArrayList<>();
     }
 
     public Library(int id,String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
         this.id = id;
-        this.bookSet = new TreeSet<>( new BookComparator());
+        this.bookSet =  new ArrayList<>();
         this.numberOfBooks = Integer.parseInt(numberOfBooks);
         this.signDays = Integer.parseInt(signDays);
         this.numberOfBooksScannedPerDay = Integer.parseInt(numberOfBooksScannedPerDay);
@@ -34,11 +32,11 @@ public class Library {
         this.id = id;
     }
 
-    public Set<Book> getBookSet() {
+    public List<Book> getBookSet() {
         return bookSet;
     }
 
-    public void setBookSet(Set<Book> bookSet) {
+    public void setBookSet(List<Book> bookSet) {
         this.bookSet = bookSet;
     }
 
