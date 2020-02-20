@@ -13,12 +13,12 @@ public class Library {
     private int totalScoring;
 
     public Library() {
-        this.bookSet = new ArrayList<>();
+        this.bookSet = new LinkedList<>();
     }
 
     public Library(int id,String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
         this.id = id;
-        this.bookSet =  new ArrayList<>();
+        this.bookSet =  new LinkedList<>();
         this.numberOfBooks = Integer.parseInt(numberOfBooks);
         this.signDays = Integer.parseInt(signDays);
         this.numberOfBooksScannedPerDay = Integer.parseInt(numberOfBooksScannedPerDay);

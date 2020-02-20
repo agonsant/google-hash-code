@@ -22,7 +22,7 @@ public class LibrarySerializer implements StringSerializer<OutputData> {
         	Library lib = itLib.next();
         	deliveryString.append(lib.getId());
         	deliveryString.append(" ");
-        	Set<Book> b = lib.getBookSet();
+        	List<Book> b = lib.getBookSet();
         	deliveryString.append(b.size());
         	Iterator<Book> itBook = b.iterator();
             deliveryString.append(System.getProperty("line.separator"));

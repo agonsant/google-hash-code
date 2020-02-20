@@ -11,6 +11,8 @@ import allbros.google.hashcode.model.Book;
 import allbros.google.hashcode.model.InputData;
 import allbros.google.hashcode.model.Library;
 import allbros.google.hashcode.model.OutputData;
+import allbros.google.hashcode.model.comparator.BookComparator;
+import allbros.google.hashcode.model.comparator.LibraryComparator;
 
 public class ScanLibrarySolver implements Solver<InputData, OutputData> {
 
@@ -20,11 +22,12 @@ public class ScanLibrarySolver implements Solver<InputData, OutputData> {
 	public OutputData solve(InputData input) {
 		OutputData out = new OutputData();
 		List<Library> libs = new LinkedList<Library>();
+		input.getLibrarySet().sort(new LibraryComparator());
 		int totalDays = input.getDayToShip();
-
 		Iterator<Library> itLib = input.getLibrarySet().iterator();
 		while (itLib.hasNext() && totalDays > 0) {
 			Library lib = itLib.next();
+			lib.getBookSet().sort(new BookComparator());
 			totalDays -= lib.getSignDays();
 			libs.add(lib);
 		}

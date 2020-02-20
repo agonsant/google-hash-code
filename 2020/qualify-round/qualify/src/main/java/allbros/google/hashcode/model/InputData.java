@@ -2,8 +2,6 @@ package allbros.google.hashcode.model;
 
 import java.util.*;
 
-import allbros.google.hashcode.model.comparator.LibraryComparator;
-
 public class InputData {
     private List<Library> librarySet;
     private Book[] bookArray;
@@ -12,7 +10,7 @@ public class InputData {
     private int numberOfLibraries;
 
     public InputData() {
-        this.librarySet = new ArrayList<>() ;
+        this.librarySet = new LinkedList<>() ;
     }
 
     public List<Library> getLibrarySet() {
