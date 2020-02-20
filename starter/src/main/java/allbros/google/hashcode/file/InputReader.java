@@ -2,6 +2,7 @@ package allbros.google.hashcode.file;
 
 import allbros.google.hashcode.file.contract.StringDeserializer;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -22,7 +23,9 @@ public class InputReader<TInput>  {
 
     private String readCompleteFile(String filePath) {
         StringBuilder contentBuilder = new StringBuilder();
-        try (Stream<String> stream = Files.lines(Paths.get(filePath), StandardCharsets.UTF_8)) {
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource(filePath).getPath());
+        try (Stream<String> stream = Files.lines(file.toPath(), StandardCharsets.UTF_8)) {
             stream.forEach(s -> contentBuilder.append(s).append("\n"));
         } catch (IOException e) {
             e.printStackTrace();
