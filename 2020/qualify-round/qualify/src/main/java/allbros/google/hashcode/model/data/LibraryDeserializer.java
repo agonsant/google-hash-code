@@ -8,7 +8,7 @@ import allbros.google.hashcode.model.Library;
 public class LibraryDeserializer implements StringDeserializer<InputData> {
     @Override
     public InputData deserialize(String stringToDeserialize) {
-        String[] lines = stringToDeserialize.split(System.getProperty("line.separator"));
+        String[] lines = stringToDeserialize.split("\n");
         InputData inputData = loadInitData(lines[0]);
         inputData.setBookArray(loadBookData(lines[1]));
         for(int i = 2; i<lines.length-1; i+=2){
@@ -23,7 +23,7 @@ public class LibraryDeserializer implements StringDeserializer<InputData> {
         Library newLibrary = new Library(librarySetupSplit[0],librarySetupSplit[1],librarySetupSplit[2]);
 
         for(String bookId:libraryBooksSetDataSplit) {
-            newLibrary.getBookSet().add(googleBookSet[Integer.parseInt(bookId)]);
+            newLibrary.addBook(googleBookSet[Integer.parseInt(bookId)]);
         }
         return newLibrary;
     }

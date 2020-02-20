@@ -55,6 +55,7 @@ public class InputData {
         this.bookArray = bookArray;
     }
 
-    public void addLibrary(Library loadLibraryData) {
+    public void addLibrary(Library newLibrary) {
+        getLibrarySet().add(newLibrary);
     }
 }
