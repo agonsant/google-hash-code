@@ -4,6 +4,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
+import allbros.google.hashcode.model.comparator.BookComparator;
+
 public class Library {
     private int id;
     private Set<Book> bookSet;
@@ -11,7 +13,7 @@ public class Library {
     private int numberBookScannedPerDay;
 
     public Library() {
-        this.bookSet = new TreeSet<>();
+        this.bookSet = new TreeSet<Book>( new BookComparator());
     }
 
     public int getId() {
