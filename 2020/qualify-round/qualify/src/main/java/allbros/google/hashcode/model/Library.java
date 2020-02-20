@@ -18,7 +18,8 @@ public class Library {
         this.bookSet = new TreeSet<>( new BookComparator());
     }
 
-    public Library(String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
+    public Library(int id,String numberOfBooks, String signDays, String numberOfBooksScannedPerDay) {
+        this.id = id;
         this.bookSet = new TreeSet<>( new BookComparator());
         this.numberOfBooks = Integer.parseInt(numberOfBooks);
         this.signDays = Integer.parseInt(signDays);

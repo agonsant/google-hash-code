@@ -12,15 +12,15 @@ public class LibraryDeserializer implements StringDeserializer<InputData> {
         InputData inputData = loadInitData(lines[0]);
         inputData.setBookArray(loadBookData(lines[1]));
         for(int i = 2; i<lines.length-1; i+=2){
-            inputData.addLibrary(loadLibraryData(lines[i], lines[i+1],inputData.getBookArray()));
+            inputData.addLibrary(loadLibraryData((i/2-1), lines[i], lines[i+1],inputData.getBookArray()));
         }
         return inputData;
     }
 
-    private Library loadLibraryData(String librarySetup, String libraryBooksSetData,Book[] googleBookSet) {
+    private Library loadLibraryData(int libraryId,String librarySetup, String libraryBooksSetData,Book[] googleBookSet) {
         String[] librarySetupSplit = librarySetup.split(" ");
         String[] libraryBooksSetDataSplit = libraryBooksSetData.split(" ");
-        Library newLibrary = new Library(librarySetupSplit[0],librarySetupSplit[1],librarySetupSplit[2]);
+        Library newLibrary = new Library(libraryId,librarySetupSplit[0],librarySetupSplit[1],librarySetupSplit[2]);
 
         for(String bookId:libraryBooksSetDataSplit) {
             newLibrary.addBook(googleBookSet[Integer.parseInt(bookId)]);

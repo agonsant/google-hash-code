@@ -26,6 +26,6 @@ public class Launcher<TInput,TOutput> {
     {
        TInput inputData = this.reader.readFile(dataSetFilePath[dataSetIndex]);
        TOutput outputData = solver.solve(inputData);
-       this.writer.writeFile(outputData,solutionSetFilePath[dataSetIndex]);
+        this.writer.writeFile(outputData,solutionSetFilePath[dataSetIndex]);
     }
 }
