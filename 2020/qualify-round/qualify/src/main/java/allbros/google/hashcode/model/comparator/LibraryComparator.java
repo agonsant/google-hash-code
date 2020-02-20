@@ -8,12 +8,12 @@ public class LibraryComparator implements Comparator<Library> {
 
 	@Override
 	public int compare(Library o1, Library o2) {
-		return o1.getSignDays() < o2.getSignDays() ? 1
+		return (o1.getSignDays() < o2.getSignDays() ? 1
 				: (o1.getSignDays() > o2.getSignDays() ? -1
 						: (o1.getNumberOfBooksScannedPerDay() > o2.getNumberOfBooksScannedPerDay() ? 1
 								: (o1.getNumberOfBooksScannedPerDay() < o2.getNumberOfBooksScannedPerDay() ? -1 
 										: (o1.getTotalScoring() > o2.getTotalScoring() ? 1 
-												: (o1.getTotalScoring() < o2.getTotalScoring() ? -1: 0)))));
+												: (o1.getTotalScoring() < o2.getTotalScoring() ? -1: 0)))))) * -1;
 
 	}
 
