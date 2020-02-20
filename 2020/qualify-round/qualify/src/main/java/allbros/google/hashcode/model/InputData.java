@@ -6,7 +6,10 @@ import allbros.google.hashcode.model.comparator.LibraryComparator;
 
 public class InputData {
     public Set<Library> librarySet;
+    public Book[] bookArray;
     public int dayToShip;
+    public int numberOfBooks;
+    public int numberOfLibraries;
 
     public InputData() {
         this.librarySet = new TreeSet<Library>(new LibraryComparator()) ;
@@ -26,5 +29,32 @@ public class InputData {
 
     public void setDayToShip(int dayToShip) {
         this.dayToShip = dayToShip;
+    }
+
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    public void setNumberOfBooks(int numberOfBooks) {
+        this.numberOfBooks = numberOfBooks;
+    }
+
+    public int getNumberOfLibraries() {
+        return numberOfLibraries;
+    }
+
+    public void setNumberOfLibraries(int numberOfLibraries) {
+        this.numberOfLibraries = numberOfLibraries;
+    }
+
+    public Book[] getBookArray() {
+        return bookArray;
+    }
+
+    public void setBookArray(Book[] bookArray) {
+        this.bookArray = bookArray;
+    }
+
+    public void addLibrary(Library loadLibraryData) {
     }
 }
